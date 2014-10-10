@@ -3,12 +3,12 @@ package enclos;
 import java.util.ArrayList;
 
 public class Enclos {
-	private String name;
-	private int area;
-	private int maxAnimals;
-	private int numAnimals;
-	private ArrayList<Animals> animalsList;
-	private static String cleanliness;
+	protected String name;
+	protected int area;
+	protected int maxAnimals;
+	protected int numAnimals;
+	protected ArrayList<Animals> animalsList;
+	protected String cleanliness;
 	
 	
 	public Enclos(String name, int area, int maxAnimals, int numAnimals,
