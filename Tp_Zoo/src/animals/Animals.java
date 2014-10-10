@@ -9,6 +9,20 @@ public abstract class Animals {
 	protected boolean isHungry;
 	protected boolean isSleeping;
 	protected boolean isHealthy;
+	protected int gestationDays;
+
+	Animals(String name, String gender, long weight, long height, 
+			boolean isHungry, boolean isSleeping, boolean isHealthy){
+		
+		this.name = name;
+		this.gender = gender;;
+		this.weight = weight;;
+		this.height = height;;
+		this.isHungry = isHungry;;
+		this.isSleeping = isSleeping;;
+		this.isHealthy = isHealthy;
+		
+	}
 	
 	protected void eat(){
 		if(! this.isSleeping){
