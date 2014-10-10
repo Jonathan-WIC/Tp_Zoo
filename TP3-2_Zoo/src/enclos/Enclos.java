@@ -7,12 +7,12 @@ public class Enclos {
 	private int area;
 	private int maxAnimals;
 	private int numAnimals;
-	private ArrayList<Animal> animalsList;
+	private ArrayList<Animals> animalsList;
 	private static String cleanliness;
 	
 	
 	public Enclos(String name, int area, int maxAnimals, int numAnimals,
-				  ArrayList<Animal> animalsList) {
+				  ArrayList<Animals> animalsList) {
 		this.name = name;
 		this.area = area;
 		this.maxAnimals = maxAnimals;
@@ -50,10 +50,10 @@ public class Enclos {
 		this.numAnimals = numAnimals;
 	}
 
-	public ArrayList<Animal> getAnimals() {
+	public ArrayList<Animals> getAnimals() {
 		return animalsList;
 	}
-	public void setAnimals(ArrayList<Animal> animalsList) {
+	public void setAnimals(ArrayList<Animals> animalsList) {
 		this.animalsList = animalsList;
 	}
 
@@ -74,7 +74,7 @@ public class Enclos {
 		System.out.println( toString() + '\n' + this.animalsList.toString() );
 	}
 	
-	public void addAnimals(ArrayList<Animal> animalsList) {
+	public void addAnimals(ArrayList<Animals> animalsList) {
 		if(numAnimals+animalsList.size() <= maxAnimals) {
 			this.animalsList.add(animalsList);
 			numAnimals+=1;
@@ -82,8 +82,8 @@ public class Enclos {
 			System.err.println("The run is already full, we can't add another animal...");
 		}
 	}
-	public void removeAnimals(ArrayList<Animal> animalsList) {
-		for(Animal a : this.animalsList){
+	public void removeAnimals(ArrayList<Animals> animalsList) {
+		for(Animals a : this.animalsList){
 		    if (a == animalsList) {
 		        this.animalsList.remove(animalsList);
 		        --numAnimals;
@@ -91,7 +91,17 @@ public class Enclos {
 		}
 	}
 	
+	public void feed() {
+		if(this.animals.isHungry) {
+			this.animals.eat();
+		}
+	}
 	
+	public void clean() {
+		if(cleanliness == "mauvais" && this.animals.isEmpty()) {
+			setCleanliness("bon");
+		}
+	}
 	
 	@Override
 	public String toString() {
