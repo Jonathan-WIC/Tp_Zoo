@@ -15,7 +15,7 @@ public class Whale extends Animals implements Mammal, Aquatic{
 
 	@Override
 	public void birth() {
-		System.out.println("After "+ gestationDays + "days, a cute little whale is born, so swwet :3");
+		System.out.println("After "+ gestationDays + "days, a cute little "+ this.name +" is born, so swwet :3");
 	}
 
 	@Override

@@ -1,17 +1,17 @@
 package animals;
 
-public class Goldfish extends Animals implements Aquatic, Oviparous{
+public class Shark extends Animals implements Aquatic, Oviparous{
 
-	private static final int incubationDays = 3;
+	private static final int incubationDays = 336;
 
-	Goldfish(String name, String gender, long weight, long height,
+	Shark(String name, String gender, long weight, long height,
 			boolean isHungry, boolean isSleeping, boolean isHealthy) {
 		super(name, gender, weight, height, isHungry, isSleeping, isHealthy);
 	}
 
 	@Override
 	void emmitSound() {
-		System.out.println("Bloup...");
+		System.out.println("...");
 	}
 
 	@Override
@@ -21,7 +21,7 @@ public class Goldfish extends Animals implements Aquatic, Oviparous{
 
 	@Override
 	public void swim() {
-		System.out.println("This round aquarium is endless!");
+		System.out.println("*Swim* *Swim* *Swim*");
 	}
 
 }
