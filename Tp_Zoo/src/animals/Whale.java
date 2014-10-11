@@ -2,7 +2,7 @@ package animals;
 
 public class Whale extends Animals implements Mammal, Aquatic{
 	
-private static final int gestationDays = 60;
+	private static final int gestationDays = 336;
 	
 	Whale(String name, String gender, long weight, long height, boolean isHungry, boolean isSleeping, boolean isHealthy){
 		super(name, gender, weight, height, isHungry, isSleeping, isHealthy);

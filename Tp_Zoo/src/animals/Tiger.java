@@ -2,6 +2,8 @@ package animals;
 
 public class Tiger extends Animals implements Mammal, Wanderer {
 
+	private static final int gestationDays = 103;
+	
 	Tiger(String name, String gender, long weight, long height,boolean isHungry, boolean isSleeping, boolean isHealthy) {
 		super(name, gender, weight, height, isHungry, isSleeping, isHealthy);
 	}
